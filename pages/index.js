@@ -5,7 +5,7 @@ export default function Home({ isConnected }) {
   return (
     <div className="container">
       <Head>
-        <title>Create Next App</title>
+        <title>MongoDB with Next</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
