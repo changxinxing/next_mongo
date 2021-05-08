@@ -4,7 +4,7 @@ export default async (req, res) => {
   const { db } = await connectToDatabase();
 
   const movies = await db
-    .collection("movies")
+    .collection("userlists")
     .find({})
     .sort({ metacritic: -1 })
     .limit(20)
