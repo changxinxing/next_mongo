@@ -7,13 +7,17 @@
     "start": "next start"
   },
   "dependencies": {
+    "autoprefixer": "^10.2.5",
+    "cookie-parser": "^1.4.5",
     "express": "^4.17.1",
     "mongodb": "^3.6.6",
     "next": "latest",
+    "postcss": "^8.2.14",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^2.0.3"
+    "semantic-ui-react": "^2.0.3",
+    "tailwindcss": "^2.1.2"
   },
   "license": "MIT",
   "devDependencies": {
