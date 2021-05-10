@@ -12,7 +12,6 @@ export default function Form() {
         },
         method: 'POST'
       })
-  
       const result = await res.json()
       // result.user => 'Ada Lovelace'
     }
