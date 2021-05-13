@@ -3,29 +3,23 @@ import axios from 'axios'
 import md5 from 'md5'
 
 export default function Form() {
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const onChangeName = (e) => {
-    setName(e.target.value);
-  }
   const onChangeEmail = (e) => {
     setEmail(e.target.value);
   }
   const onChangePassword = (e) => {
     setPassword(e.target.value);
   }
-
-  const registerUser = async event => {
+  const login = async event => {
     event.preventDefault();
     let postData = {
-      name: name,
       email: email,
       password: md5(password)
     }
     axios
-      .post("http://localhost:4000/signup", postData)
+      .post("http://localhost:4000/login", postData)
       .then((res) => {
         console.log(res)
       })
@@ -33,13 +27,7 @@ export default function Form() {
 
   return (
     <div className="w-full max-w-xs">
-      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={registerUser}>
-        <div className="mb-4">
-          <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="rname">
-            Username
-          </label>
-          <input className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="name" name="name" type="text" autoComplete="name" onChange={onChangeName} required />
-        </div>
+      <form className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4" onSubmit={login}>
         <div className="mb-4">
           <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
             Email
@@ -54,7 +42,7 @@ export default function Form() {
         </div>
         <div className="flex items-center justify-between">
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-            Register
+            Login
           </button>
         </div>
       </form>

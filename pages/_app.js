@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import Link from 'next/link'
 import {useRouter } from 'next/router'
+import 'tailwindcss/tailwind.css'
 import '../styles/globals.css'
 import {Button, Container, Grid, Header, Image, Menu, Segment, Sidebar, Visibility} from 'semantic-ui-react'
 import 'semantic-ui-css/semantic.min.css'
@@ -19,8 +20,8 @@ const Navbar = () => {
               <Link href = "/"><Menu.Item>Home</Menu.Item></Link>
               <Link href = "/members"><Menu.Item>Members</Menu.Item></Link>
               <Menu.Item position = "right">
-                <Button style = {{marginRight:50}}><Link href = "/signup">Signup</Link></Button>
-                <Button><Link href = "/">Login</Link></Button>
+                <Button inverted color='pink' style = {{marginRight:50}}><Link href = "/signup">Signup</Link></Button>
+                <Button inverted color='green'><Link href = "/login">Login</Link></Button>
               </Menu.Item>
             </Container>
           </Menu>
