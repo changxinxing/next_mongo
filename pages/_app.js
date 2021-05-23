@@ -18,7 +18,8 @@ const Navbar = () => {
           <Menu fixed = {fixed ? "top":null} inverted = {!fixed} pointing = {!fixed} secondary = {!fixed} size = {'large'}>
             <Container>
               <Link href = "/"><Menu.Item>Home</Menu.Item></Link>
-              <Link href = "/members"><Menu.Item>Members</Menu.Item></Link>
+              <Link href = "/members"><Menu.Item>Customers</Menu.Item></Link>
+              <Link href = "/allproducts"><Menu.Item>Shop</Menu.Item></Link>
               <Menu.Item position = "right">
                 <Button inverted color='pink' style = {{marginRight:50}}><Link href = "/signup">Signup</Link></Button>
                 <Button inverted color='green'><Link href = "/login">Login</Link></Button>
