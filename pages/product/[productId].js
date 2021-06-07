@@ -1,14 +1,12 @@
 import {useRouter} from 'next/router'
 import {client} from '../../util/shopify'
 import {useState} from 'react'
-import {Button, Container, Grid, Header, Image, Input, List, Menu, Segment, Sidebar, Visibility} from 'semantic-ui-react'
+import {Grid, Image, Input, List} from 'semantic-ui-react'
 
 const {Row, Column} = Grid
 const Product = ({product}) => {
     const [image, setImage] = useState(product.images[0]);
     const [quantity, setQuantity] = useState(0)
-    const router = useRouter()
-    const {productId} = router.query
     console.log({product});
 
     const addToCart = async () => {

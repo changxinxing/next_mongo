@@ -1,6 +1,6 @@
 import { connectToDatabase } from "../util/mongodb";
 import Link from 'next/link'
-import { Card, Grid } from 'semantic-ui-react'
+import { Button, Card, Grid } from 'semantic-ui-react'
 
 export default function Movies({ movies }) {
     return (
@@ -8,11 +8,13 @@ export default function Movies({ movies }) {
             <Grid centered>
             <Card.Group itemsPerRow = {2}>
                 {movies.map((movie, index) => (
-                    <Link href = {`/users/${movie.name}`} key={index}>
-                        <Card>
-                        <h2>{movie.name}</h2>
-                        </Card>
-                    </Link>
+                    <Card key={index}>
+                        <Link href = {`/users/${movie.name}`} >
+                            <Button>{movie.name}</Button>                      
+                        </Link>
+                        <Button inverted color='red'><Link href = {`/removeuser/${movie.name}`}>Remove</Link></Button>
+                    </Card>
+                    
                 ))}
             </Card.Group>
         </Grid>
