@@ -11,6 +11,10 @@ const userSchema = new Schema({
             trim: true,
             unique: 1
         },
+        img: {
+            data: Buffer,
+            contentType: String
+        },
         password: {
             type: String,
             minlength: 5

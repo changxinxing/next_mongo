@@ -28,7 +28,7 @@ export default function Form() {
       .post("http://localhost:4000/signup", postData)
       .then((res) => {
         console.log(res)
-      })
+      }) 
   }
 
   return (
